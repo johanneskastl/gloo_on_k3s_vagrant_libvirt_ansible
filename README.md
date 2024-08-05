@@ -1,7 +1,12 @@
-# k3s_vagrant_libvirt_ansible
+# gloo_on_k3s_vagrant_libvirt_ansible
 
 Vagrant-libvirt setup that creates a VM with [k3s](https://k3s.io/), the minimal
 lightweight Kubernetes distribution.
+
+Instead of Traefik, that normally comes with k3s, this setup installs the [gloo
+API gateway](https://github.com/solo-io/gloo) and a small Nginx application,
+that it exposes using the [Kubernetes
+GatewayAPI](https://kubernetes.io/docs/concepts/services-networking/gateway/).
 
 Default OS is openSUSE Leap 15.6, but that can be changed in the Vagrantfile.
 Please be aware, that this might break the Ansible provisioning.

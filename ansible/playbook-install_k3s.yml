@@ -35,7 +35,7 @@
         or
         pod_list | json_query("resources[*].status.phase") | unique | sort == ["Running", "Succeeded"]
         '
-      retries: 12
+      retries: 24
       delay: 10
 
     - name: 'Wait until all pods are ready'

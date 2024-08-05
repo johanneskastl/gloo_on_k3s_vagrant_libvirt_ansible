@@ -111,6 +111,7 @@
         '
       retries: 12
       delay: 10
+
     - name: 'Wait for URL to be available'
       ansible.builtin.uri:
         url: "http://nginx.{{ hostvars[inventory_hostname]['ansible_default_ipv4']['address'] }}.sslip.io"

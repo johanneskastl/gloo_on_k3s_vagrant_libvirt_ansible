@@ -5,3 +5,6 @@
 
 - name: 'Run playbook-gloo.yml'
   ansible.builtin.import_playbook: playbook-gloo.yml
+
+- name: 'Run playbook-nginx.yml'
+  ansible.builtin.import_playbook: playbook-nginx.yml

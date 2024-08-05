@@ -19,8 +19,10 @@ Please be aware, that this might break the Ansible provisioning.
 1. Make sure the git submodules are fully working by issuing
    `git submodule init && git submodule update`
 1. Run `vagrant up`
-1. Run `kubectl --kubeconfig ansible/k3s-kubeconfig get nodes` and you should
-   see your server.
+1. Wait for the Ansible provisioning to finish. At the end, it will output a URL
+   that looks something like `http://nginx.192.0.2.13.sslip.io`.
+1. Open that URL in your browser and you should see the Nginx welcome page,
+   served by Nginx and Gloo.
 1. Party!
 
 ## Cleaning up
